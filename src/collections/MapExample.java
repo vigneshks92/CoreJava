@@ -2,6 +2,7 @@ package collections;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.TreeMap;
 
 public class MapExample {
@@ -28,6 +29,25 @@ public class MapExample {
 		
 		System.out.println(map1.get(3));
 		
+		
+		for(Map.Entry<Integer, String> entry1 : map1.entrySet()) {
+			
+			System.out.println(entry1.getKey());
+			System.out.println(entry1.getValue());
+		}
+		
+		for(Integer val: map1.keySet() ) {
+			
+			System.out.println("Key is " + val);
+			System.out.println("Value is " + map1.get(val));
+		}
+		
+		for(String val : map1.values()) {
+			
+			System.out.println("Value is " + val);
+		}
+		
+		
 		//===============================================
 		
 		LinkedHashMap<Integer,String> map2 = new LinkedHashMap<Integer,String>();
@@ -49,7 +69,10 @@ public class MapExample {
 		map3.put(3, "Sam");
 	
 		
-		System.out.println(map3);
+		System.out.println(map3); 
+		
+		
+		String str1 = "Clean India Green India Love India";
 		
 		
 	}
